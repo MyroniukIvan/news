@@ -1,0 +1,43 @@
+.statistics {
+  font-family: 'TT Severs', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  color: #EBEBEB;
+  align-items: center;
+  background: #121B30;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 6px;
+  padding-top: 9px;
+  &-block {
+   display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &-icon {
+    width: 20px;
+    height: 20px;
+
+    padding-right: 20px;
+  }
+
+  &-cover {
+    text-align: center;
+    font-family: 'Alkalami', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 17px;
+    align-items: center;
+    color: white;
+    background: linear-gradient(90deg, #121B30 84.29%, rgba(18, 27, 48, 0) 100%);
+    background-size: 110px;
+
+  }
+}
+span {
+  padding-left: 2px;
+  color: #FF7534;
+}

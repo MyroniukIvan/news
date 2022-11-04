@@ -1,0 +1,124 @@
+.news {
+  align-items: flex-start;
+  display: flex;
+  justify-content: center;
+  background: #F7F7F7;
+
+  &__selection {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 32px;
+    flex-wrap: wrap;
+    width: 100%;
+
+    &-block {
+      padding-right: 64px;
+      padding-top: 32px;
+      display: flex;
+      flex-direction: column;
+
+      width: 15rem;
+      text-align: left;
+    }
+
+    &-image {
+      width: 304px;
+      height: 171px;
+    }
+
+    &-text {
+      font-family: 'TT Severs';
+      font-style: normal;
+      color: #182840;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 130%;
+    }
+
+    &-data {
+      padding-top: 18px;
+      font-family: 'TT Severs';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 140%;
+      text-transform: uppercase;
+      color: #707070;
+    }
+
+    &-title {
+      width: 304px;
+      height: 63px;
+      display: flex;
+      justify-content: flex-start;
+      margin-left: 68px;
+      font-family: 'TT Severs';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 130%;
+      text-align: center;
+    }
+
+    &-text {
+      width: 304px;
+      height: 63px;
+      display: block;
+    }
+  }
+}
+
+.all {
+  background: #FFFFFF;
+  border-radius: 12px;
+  width: 304px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px 16px 24px;
+  gap: 32px;
+
+  &-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-archive {
+      font-family: inherit;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 140%;
+      cursor: pointer;
+      &:before {
+        content: 'Архів';
+        border-bottom: black 1px solid;
+      }
+    }
+
+    &-header {
+      font-family: 'TT Severs';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 140%;
+      color: #2D2D2D;
+    }
+  }
+
+  &__article {
+    text-align: left;
+    display: flex;
+    width: 272px;
+    height: 88px;
+    padding: 16px;
+
+    &-time {
+      color: #707070;
+    }
+  }
+
+  &__items {
+    padding-right: 16px;
+  }
+}

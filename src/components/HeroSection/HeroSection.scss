@@ -1,0 +1,93 @@
+.hero {
+  padding-left: 64px;
+  padding-right: 64px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 654px;
+  background: linear-gradient(180deg, rgba(21, 35, 56, 0.5) 0%, rgba(17, 29, 46, 0.24) 21.74%, rgba(17, 29, 46, 0.4) 62.16%, rgba(24, 40, 64, 0.9) 100%) center center fixed;
+
+  &-text {
+    padding-top: 238px;
+
+    text-align: left;
+    height: 192px;
+    width: 752px;
+    color: #FFFFFF;
+    font-family: 'Roboto Light', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  order: 2;
+  align-self: stretch;
+  justify-content: space-between;
+  align-items: center;
+
+  &__text {
+    letter-spacing: 1px;
+    text-align: left;
+    opacity: 0.7;
+    font-family: 'Roboto Light', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    color: #FFFFFF;
+  }
+ &__block {
+   user-select: none;
+   cursor: pointer;
+   width: 304px;
+   height: 80px;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   padding: 8px;
+   gap: 16px;
+   background: rgba(255, 255, 255, 0.16);
+   box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.16);
+   border-radius: 12px;
+   &-img {
+     align-items: center;
+     width: 64px;
+     height: 64px;
+     border-radius: 10px;
+   }
+ }
+}
+.active {
+  background: rgba(255, 255, 255, 0.32);
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.16);
+}
+.carousel {
+  width: 500px;
+  background-size: 100% 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  &__btn {
+    &-prev {
+      cursor: pointer;
+    }
+    &-next {
+      cursor: pointer;
+    }
+  }
+  &__controls {
+    color: white;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+  }
+}

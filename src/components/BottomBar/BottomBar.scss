@@ -1,0 +1,49 @@
+.bottomBar {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  font-family: 'TT Severs', serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #182840;
+  /* identical to box height */
+  padding-bottom: 16px;
+  letter-spacing: 0.015em;
+  text-transform: uppercase;
+  &__list {
+    margin-left: 40px;
+    display: flex;
+    gap: 43px;
+    align-items: center;
+    :first-child {
+      display: flex;
+      gap: 10px;
+      color: #FF7534;
+    }
+  }
+  /* Primary Blue/Main */
+  &-live {
+    margin-right: 60px;
+    gap: 15px;
+    display: flex;
+    justify-content: flex-end;
+    font-family: 'TT Severs', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+
+    letter-spacing: 0.015em;
+    text-transform: uppercase;
+    /* Primary Blue/Main */
+      color: #182840;
+   .fa-solid {
+      color: red;
+    }
+  }
+
+
+}
