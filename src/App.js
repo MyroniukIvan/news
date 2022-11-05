@@ -4,6 +4,7 @@ import BottomBar from "./components/BottomBar/BottomBar";
 import Statistics from "./components/Statistics/Statistics";
 import HeroSection from "./components/HeroSection/HeroSection";
 import News from "./components/News/News";
+import VideoSection from "./components/VideoSection/VideoSection";
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
             <Statistics/>
             <HeroSection/>
             <News/>
+            <VideoSection/>
         </div>
     );
 }
