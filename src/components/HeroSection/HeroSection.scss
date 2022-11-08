@@ -6,7 +6,6 @@
   flex-direction: column;
   height: 654px;
   background: linear-gradient(180deg, rgba(21, 35, 56, 0.5) 0%, rgba(17, 29, 46, 0.24) 21.74%, rgba(17, 29, 46, 0.4) 62.16%, rgba(24, 40, 64, 0.9) 100%) center center fixed;
-
   &-text {
     padding-top: 238px;
 
@@ -22,12 +21,9 @@
   }
 
 }
-
 .cards {
   display: flex;
   flex-direction: row;
-  order: 2;
-  align-self: stretch;
   justify-content: space-between;
   align-items: center;
 

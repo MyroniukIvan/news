@@ -5,6 +5,7 @@ import Statistics from "./components/Statistics/Statistics";
 import HeroSection from "./components/HeroSection/HeroSection";
 import News from "./components/News/News";
 import VideoSection from "./components/VideoSection/VideoSection";
+import Categories from "./components/Categories/Categories";
 
 function App() {
     return (
@@ -15,6 +16,7 @@ function App() {
             <HeroSection/>
             <News/>
             <VideoSection/>
+            <Categories/>
         </div>
     );
 }

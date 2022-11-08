@@ -1,6 +1,49 @@
 .video {
-  display: flex;
+  padding-top: 64px;
+  background: linear-gradient(180deg, rgba(21, 35, 56, 0.5) 0%, rgba(24, 40, 64, 0.95)), url("https://i.ytimg.com/vi/6dBKNDQDd28/maxresdefault.jpg"), 100% 100%;
+  display: grid;
   justify-content: center;
+  grid-template-columns: 50% 50%;
+  &__video {
+   margin: 16px;
+  }
+  &__block {
+    padding-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+    font-family: "Roboto Light", sans-serif;
+
+    &-date {
+      padding-top: 8px;
+      display: flex;
+      align-items: flex-start;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 140%;
+      color: #FFFFFF;
+    }
+    &-description {
+      text-align: left;
+      padding-top: 18px;
+      font-weight: 600;
+      font-size: 32px;
+      color: white;
+    }
+    &-title {
+      color: white;
+      font-weight: 600;
+      font-size: 16px;
+      text-align: left;
+
+    }
+
+    &-header {
+      padding-left: 16px;
+      margin: 10px;
+    }
+  }
+
   &-main {
     &-container {
       display: flex;
@@ -10,20 +53,52 @@
       padding-right: 34px;
     }
   }
+
   &__main {
+    padding-top: 14px;
+    border: none;
     max-width: 640px;
     max-height: 360px;
   }
 
   &__container {
+
+    display: grid;
+    align-items: center;
+    grid-template-columns: 50% 50%;
+  }
+
+  &__header {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    gap: 32px;
+    justify-content: space-between;
+    padding: 64px;
   }
 
   &__block {
     min-width: 304px;
     min-height: 240px;
+  }
+}
+
+.video__title {
+  display: flex;
+  justify-content: space-around;
+
+  &-text {
+    color: #FFFFFF;
+    font-family: "Roboto Light", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 130%;
+  }
+
+  &-link {
+    color: #FFFFFF;
+    font-family: "Roboto Light", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
   }
 }

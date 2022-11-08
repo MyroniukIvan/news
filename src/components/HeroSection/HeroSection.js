@@ -1,10 +1,9 @@
 import React, {useMemo, useState} from 'react';
 import "./HeroSection.scss";
-import heroBackground from '../../assets/character.svg';
+
 import NewsChip from "../NewsChip/NewsChip";
 import {news} from '../../data/news';
 import _ from "lodash";
-
 const HeroSection = () => {
     const [count, setCount] = useState(1);
 

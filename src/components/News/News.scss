@@ -1,24 +1,23 @@
 .news {
-  align-items: flex-start;
   display: flex;
-  justify-content: center;
+  width: 100%;
+  align-items: center;
   background: #F7F7F7;
 
   &__all {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    padding-bottom: 32px;
   }
 
   &__selection {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     position: relative;
     justify-content: center;
-    gap: 16px;
     flex-wrap: wrap;
-    width: 100%;
 
     &-block {
       padding-right: 64px;
@@ -35,7 +34,6 @@
     }
 
     &-text {
-      font-family: 'TT Severs';
       font-style: normal;
       color: #182840;
       font-weight: 600;
@@ -45,7 +43,6 @@
 
     &-data {
       padding-top: 18px;
-      font-family: 'TT Severs';
       font-style: normal;
       font-weight: 400;
       font-size: 12px;
@@ -228,7 +225,9 @@
   display: flex;
   width: 100%;
   position: relative;
-
+   &-subtitle {
+     padding-right: 64px;
+   }
   &-title {
     font-family: 'Roboto Light', sans-serif;
     font-style: normal;
@@ -268,6 +267,7 @@
       color: #182840;
 
       &-btn {
+        padding-top: 32px;
         font-family: 'Roboto Light', sans-serif;
         font-style: normal;
         font-weight: 500;
