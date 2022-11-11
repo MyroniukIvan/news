@@ -4,6 +4,7 @@ import "./HeroSection.scss";
 import NewsChip from "../NewsChip/NewsChip";
 import {news} from '../../data/news';
 import _ from "lodash";
+
 const HeroSection = () => {
     const [count, setCount] = useState(1);
 
@@ -25,7 +26,7 @@ const HeroSection = () => {
 
 
     return (<div id={'background'} style={{
-            backgroundImage: `url(${chunks[count-1][0].img})`,
+            backgroundImage: `url(${chunks[count - 1][0].img})`,
             backgroundRepeat: 'no-repeat',
             backgroundSize: "cover",
             backgroundPosition: "50% 25%",
@@ -46,12 +47,11 @@ const HeroSection = () => {
                 </div>
                 <div className={'cards'}>
                     {chunks[count - 1].map(el => {
-                    return <NewsChip {...el}/>
+                        return <NewsChip {...el}/>
                     })}
                 </div>
             </div>
-        </div>
-    );
+        </div>);
 };
 
 export default HeroSection;
