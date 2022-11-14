@@ -10,5 +10,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="slick-carousel" level="application" />
+    <orderEntry type="library" name="default-passive-events" level="application" />
   </component>
 </module>

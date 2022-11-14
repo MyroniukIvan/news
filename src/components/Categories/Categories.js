@@ -2,9 +2,12 @@ import React from 'react';
 import "./Categories.scss";
 import newsIcon from '../../assets/news.svg';
 
+
+import {category} from "../../data/news";
+import CategoriesChip from "../CategoriesChip/CategoriesChip";
+
 const Categories = () => {
-    return (
-        <div className={"categories"}>
+    return (<div className={"categories"}>
             <div className="categories__all">
                 <div className="categories__all-header">
                     <div className={'categories__all-header-col'}>Колонки</div>
@@ -50,10 +53,8 @@ const Categories = () => {
                 </button>
             </div>
             <div className="categories-politics">
-
                 <div>
                     <div className="categories-politics__flex">
-
                         <div className="categories-politics-header">
                             <div>Політика</div>
                             <div><span>Всі новини розділу</span></div>
@@ -67,31 +68,13 @@ const Categories = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className={'categories-politics__flex-block flex'}>
-                                <div className="categories-politics__flex-block">
-                                    <div className="categories-politics__flex-miniblock">
-                                        <img src={newsIcon} alt=""/>
-                                        <div className="categories-politics__flex-miniblock-date">05 серпня 11:00</div>
-                                        <div className="categories-politics__flex-miniblock-text">У "Слузі" пояснили,
-                                            чому в
-                                            росії
-                                            знову заговорили про переговори з Україною.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="categories-politics__flex-block">
-                                    <div className="categories-politics__flex-miniblock">
-                                        <img src={newsIcon} alt=""/>
-                                        <div className="categories-politics__flex-miniblock-date">05 серпня 11:00</div>
-                                        <div className="categories-politics__flex-miniblock-text">У "Слузі" пояснили,
-                                            чому в
-                                            росії
-                                            знову заговорили про переговори з Україною.
-                                        </div>
-                                    </div>
-                                </div>
+                            <div>
+                                {category.map(el => {
+                                    return <CategoriesChip {...el}/>
+                                })}
                             </div>
                         </div>
+
                         <div className="categories-politics-news">
                             <div className="categories-politics-news-header">Новини розділу</div>
                             <div className={'fire-icon'}><i className="fa-solid fa-fire"></i>Термінова новина</div>
@@ -131,8 +114,8 @@ const Categories = () => {
                     </div>
                 </div>
             </div>
-        </div>
-    );
+        </div>)
+
 };
 
 export default Categories;

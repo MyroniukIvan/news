@@ -1,27 +1,39 @@
 import React from 'react';
 import './Statistics.scss';
-import tanksvg from '../../assets/Helmet.svg';
-import artsystems from '../../assets/artsystems.svg';
-import planes from '../../assets/planes.svg';
-import missiles from '../../assets/Missile.svg';
-import helicopters from '../../assets/helicopters.svg';
-import bbm from '../../assets/bbm.svg';
+import {useFetch} from "../../services/useFetch";
+import StatisticItem from "../StatisticsItem/StatisticItem";
+
 
 
 const Statistics = () => {
-    return (
-        <div className={'statistics'}>
-            <div className={'statistics-cover'}>131 день війни:</div>
-            <div>особовий склад <span>~36 200</span></div>
-            <div className={'statistics-block'}><img className={'statistics-icon'} src={tanksvg} alt="tanksvg"/>танки <span>1 589</span></div>
-            <div className={'statistics-block'}><img className={'statistics-icon'} src={artsystems} alt="artsystems"/>артсистеми <span>4578</span></div>
-            <div className={'statistics-block'}><img className={'statistics-icon'} src={planes} alt="planes"/>літаки <span>220</span></div>
-            <div className={'statistics-block'}><img className={'statistics-icon'} src={missiles} alt="missiles"/>РСЗВ <span>246</span></div>
-            <div className={'statistics-block'}><img className={'statistics-icon'} src={helicopters} alt="helicopters"/>гелікоптери <span>190</span>
-            </div>
-            <div className={'statistics-block'}><img className={'statistics-icon'} src={bbm} alt="bbm"/>ББМ <span>4578</span></div>
+    const {
+        data, loading, error,
+    } = useFetch('https://russianwarship.rip/api/v1/terms/en');
+
+    const {
+        data: data2, loading: loading2, error: error2,
+    } = useFetch('https://russianwarship.rip/api/v1/statistics/latest');
+    console.log(data2)
+    if (!data || !data2) return <h1> LOADING...</h1>;
+    if (loading || loading2) return <h1> LOADING...</h1>;
+    if (error || error2) console.log('error');
+
+
+
+    return (<div className={'statistics'}>
+        <div className={'statistics-cover'}>
+            {data2?.data?.day} день війни
         </div>
-    );
+
+        {Object.keys(data?.data).slice(0,10).map(key => {
+            console.log(data?.data)
+            return <StatisticItem key={key.key}
+                                  quantity={data2?.data?.stats[key]}
+                                  title={data?.data[key]?.title}
+                                  icon={data?.data[key]?.icon}
+            />
+        })}
+    </div>);
 };
 
 export default Statistics;
